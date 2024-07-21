@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "Tubender",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/images/Tubender.png",
+      "url": "#",
+      "category": "Web Design",
+      "company": "App X",
+      "slug": "tubender-website"
+    },
+    {
+      "id": 2,
+      "title": "Weekly Journal",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/images/preview-6.jpeg",
+      "url": "#",
+      "category": "Branding",
+      "company": "Technology",
+      "slug": "brand-refresh-for-technology-app"
+    },
+    {
+      "id": 3,
+      "title": "MGH Research",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/images/bmc.gif",
+      "url": "#",
+      "category": "Web Design",
+      "company": "Consulting X",
+      "slug": "bmc-research"
+    },
+    {
+      "id": 4,
+      "title": "Personal Website",
+      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/images/portfolio.png",
+      "url": "#",
+      "category": "Illustrations",
+      "company": "Edu X",
+      "slug": "personal-website"
+    }
+  ]

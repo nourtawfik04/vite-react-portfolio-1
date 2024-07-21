@@ -1,22 +1,16 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import projects from "../../projects.json";
+import projects from "../../visuals.json";
 import Button from "./Button";
 
-const PastProjects = () => {
+const Visuals = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
-  const navigate = useNavigate();
-
-  const navigateToDetails = (slug: string) => {
-    navigate(`/projects/${slug}`);
-  };
 
   return (
     <section className="bg-[#FFC700] dark:bg-neutral-900 py-20 lg:py-48 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-4 bg-[#FFC700] p-6 rounded-lg max-h-screen overflow-y-auto">
           <h2 className="mb-10 text-4xl font-normal tracking-normal xl:text-5xl">
-            UX Projects
+            Visuals
           </h2>
           <ul className="space-y-4">
             {projects.map((project, index) => (
@@ -43,10 +37,7 @@ const PastProjects = () => {
               className="w-48 mb-4"
             />
             <p>{selectedProject.description}</p>
-            <button
-              className="mt-6 px-4 py-2 bg-yellow-300 rounded-lg font-semibold"
-              onClick={() => navigateToDetails(selectedProject.slug)}
-            >
+            <button className="mt-6 px-4 py-2 bg-yellow-300 rounded-lg font-semibold">
               Learn More
             </button>
           </div>
@@ -56,4 +47,4 @@ const PastProjects = () => {
   );
 };
 
-export default PastProjects;
+export default Visuals;

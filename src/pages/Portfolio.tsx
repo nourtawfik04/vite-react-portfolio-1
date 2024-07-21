@@ -29,7 +29,7 @@ const Portfolio = () => {
 
   return (
     <div className="flex flex-col">
-      <section className="w-full bg-white dark:bg-neutral-900 py-20 lg:py-32 md:max-w-4xl mx-auto px-4">
+      <section className="w-full bg-[#FFC700] dark:bg-neutral-900 py-20 lg:py-32">
         <div className="flex flex-col gap-y-7 items-center justify-center text-center">
           <h1 className="mb-4 text-5xl font-normal tracking-normal md:text-6xl">
             Portfolio

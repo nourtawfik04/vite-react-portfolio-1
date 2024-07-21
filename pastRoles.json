@@ -1,38 +1,38 @@
 [
   {
     "id": 0,
-    "title": "Senior UI/UX Designer",
-    "startYear": "2022",
-    "endYear": "2023",
-    "company": "Meta",
-    "logo": "/images/Meta.svg",
-    "description": "Lorem ipsum dolor sit amet tragon consectetur dolseclm adipiscing elit mattis faucibus odio feugiat."
+    "title": "UX Design Co-op",
+    "startYear": "Jan 2024",
+    "endYear": "Jun 2024",
+    "company": "Dawn Foods",
+    "logo": "/images/dawn.jpg",
+    "description": "At Dawn Foods, a food supply company, I worked as a UX Designer Co-op, enhancing the website's user experience by developing a user-friendly payment portal, advanced filter features, and intuitive navigation."
   },
   {
     "id": 1,
-    "title": "Lead of UX Design",
+    "title": "Front-End Developer and UX Designer",
     "startYear": "2020",
     "endYear": "2021",
-    "company": "Twitter",
-    "logo": "/images/twitter.svg",
-    "description": "Lorem ipsum dolor sit amet tragon consectetur dolseclm adipiscing elit mattis faucibus odio feugiat."
+    "company": "Boston Medical Center",
+    "logo": "/images/bmc.jpg",
+    "description": "Collaborated with an ENT oncology research team as a front-end developer to create a website featuring a user interface and recommender system that analyzed patient-specific information for optimal treatment recommendations, enhancing personalized care."
   },
   {
     "id": 2,
-    "title": "Head of UI/UX Design",
+    "title": "Software Engineer",
     "startYear": "2019",
     "endYear": "2020",
-    "company": "YouTube",
-    "logo": "/images/youtube.svg",
-    "description": "Lorem ipsum dolor sit amet tragon consectetur dolseclm adipiscing elit mattis faucibus odio feugiat."
+    "company": "Generate",
+    "logo": "/images/generate2.png",
+    "description": "Engineered a CAD to G-Code converter in C++ for Tubender, streamlining 3D design translations for a CNC tube-bending machine. Developed a user-centric interface and website with TypeScript and React, enhancing client engagement."
   },
   {
     "id": 3,
-    "title": "Mobile UI/UX Designer",
+    "title": "Operations Associate",
     "startYear": "2017",
     "endYear": "2018",
-    "company": "Twitch",
-    "logo": "/images/twitch.svg",
-    "description": "Lorem ipsum dolor sit amet tragon consectetur dolseclm adipiscing elit mattis faucibus odio feugiat."
+    "company": "The Venture Mentoring Network at Northeastern",
+    "logo": "/images/vmn2.png",
+    "description": "Facilitated mentor pairings for 100+ mentors and Northeastern Alumni ventures to enhance startup growth. Marketed VMN and onboarded 9 new startups from Northeastern campuses at conferences."
   }
 ]

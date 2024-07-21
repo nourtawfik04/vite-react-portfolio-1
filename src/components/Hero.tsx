@@ -1,29 +1,26 @@
-import Button from "./Button"
+import Button from "./Button";
 
 interface Props {
-  scrollToAbout: () => void
+  scrollToAbout: () => void;
 }
 
 const Hero = ({ scrollToAbout = () => {} }: Props) => {
   return (
-    <section className="bg-white dark:bg-neutral-900 py-20 lg:py-48">
-      <div className="relative grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
-        <div className="mx-auto place-self-center lg:col-span-7">
-          <h1 className="lg:max-w-2xl mb-4 text-4xl font-normal tracking-normal md:text-5xl xl:text-6xl">
-            I'm Jane Doe, a designer based in Stratford, London
+    <section className="bg-[#FFC700] min-h-[100vh] py-20 lg:py-40 relative">
+      <div className="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+        <div className="w-full place-self-center lg:col-span-7 text-left px-5">
+          <h1 className="w-full mb-10 mt-20 text-4xl font-light tracking-normal md:text-3xl xl:text-5xl">
+            Hi, I'm Nour Tawfik
           </h1>
-          <p className="lg:max-w-2xl mb-6 font-normal leading-relaxed text-gray-500 lg:mb-8 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit donec morbi lectus nisi egestas proin amet rhoncus sceleris lorem feugiat amet hac ornar morbi lectus.
-          </p>
+          <p className="text-l w-full mb-5">Computer Science + Design Student</p>
+          <p className="text-l w-full mb-10">UX Design Intern</p>
         </div>
-        <div className="lg:order-first lg:mt-0 lg:col-span-5 relative">
-          <img src="/images/1.jpg" alt="hero" className="transition-all duration-700 opacity-0 animating-image" />
-          <div className="bg-neutral-950 absolute inset-0 transition-all duration-700 animating-bg w-full" />
-        </div>
-        <Button runFunc={scrollToAbout} classNames="lg:absolute w-24 h-24" />
+      </div>
+      <div className="absolute bottom-20 right-10">
+        <Button runFunc={scrollToAbout} classNames="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center" />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
