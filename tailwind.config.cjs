@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   darkMode: 'class',
   content: [
     "./index.html",
@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Thiccboi', 'sans-serif']
+      'sans': 'Thiccboi, sans-serif'
     },
     extend: {},
   },
