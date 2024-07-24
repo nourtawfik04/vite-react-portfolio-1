@@ -35,7 +35,7 @@ const Portfolio = () => {
             Portfolio
           </h1>
           <p className="mb-6 font-normal leading-relaxed text-gray-500 lg:mb-8 text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliquo.
+          This portfolio includes projects I have completed with companies I have worked with, student organizations, as well as personal projects.
           </p>
         </div>
         <div className="mx-auto md:px-0 px-3 flex gap-x-5 md:justify-center overflow-auto w-full scrollbar-hide">

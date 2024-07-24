@@ -2,12 +2,12 @@
     {
       "id": 1,
       "title": "Tubender",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description": "As part of Generate, a student-led organization at Northeastern, we collaborated with a startup that builds portable tube-bending machines to design their software and branding.",
       "image": "/images/Tubender.png",
       "url": "#",
       "category": "Web Design",
-      "company": "App X",
-      "slug": "tubender-website"
+      "company": "Generate",
+      "slug": "tubender"
     },
     {
       "id": 2,
@@ -17,16 +17,16 @@
       "url": "#",
       "category": "Branding",
       "company": "Technology",
-      "slug": "brand-refresh-for-technology-app"
+      "slug": "weekly-journal"
     },
     {
       "id": 3,
-      "title": "MGH Research",
+      "title": "BMC Research",
       "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "image": "/images/bmc.gif",
       "url": "#",
       "category": "Web Design",
-      "company": "Consulting X",
+      "company": "Boston Medical Center",
       "slug": "bmc-research"
     },
     {

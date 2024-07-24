@@ -1,16 +1,22 @@
-import ReactMarkdown from 'react-markdown'
-import raw from 'rehype-raw'
-import pastRoles from '../../pastRoles.json'
-import skills from '../../skills.json'
-import socialLinks from '../../socialLinks.json'
-import Position from './Position'
-import SocialIconConnection from './SocialIconCollection'
+import React from "react";
+import { Viewer } from "@react-pdf-viewer/core";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import resumePdf from "/Users/nourtawfik/Desktop/vite-react-portfolio/public/images/resume.pdf"; 
+import ReactMarkdown from "react-markdown";
+import raw from "rehype-raw";
+import pastRoles from "../../pastRoles.json";
+import skills from "../../skills.json";
+import socialLinks from "../../socialLinks.json";
+import Position from "./Position";
+import SocialIconConnection from "./SocialIconCollection";
 
 interface Props {
-  title: string,
-  description: string
+  title: string;
+  description: string;
 }
-const ResumeTab = ({ title, description }:Props) => {
+
+const ResumeTab = ({ title, description }: Props) => {
   return (
     <section className="bg-white dark:bg-neutral-900 py-20 lg:py-32">
       <div className="relative grid auto-cols-fr gap-5 max-w-screen-xl px-4 mx-auto lg:grid-cols-12">
@@ -23,27 +29,33 @@ const ResumeTab = ({ title, description }:Props) => {
           </ReactMarkdown>
         </div>
         <div className="lg:col-span-7 divide-y dark:divide-gray-600">
-          {
-            title.toLowerCase().includes('experience') ?
-            pastRoles.map((role: any) => <Position key={role.id} job={role} isResume={true} />) :
-            title.toLowerCase().includes('skill') ?
-            skills.map((skill: any) => <Position key={skill.id} job={skill} isResume={true} />) :
-            title.toLowerCase().includes('follow') ?
-            <SocialIconConnection links={socialLinks} /> :
+          {title.toLowerCase().includes("experience") ? (
+            pastRoles.map((role: any) => (
+              <Position key={role.id} job={role} isResume={true} />
+            ))
+          ) : title.toLowerCase().includes("skill") ? (
+            skills.map((skill: any) => (
+              <Position key={skill.id} job={skill} isResume={true} />
+            ))
+          ) : title.toLowerCase().includes("follow") ? (
+            <SocialIconConnection links={socialLinks} />
+          ) : title.toLowerCase().includes("resume") ? (
+            <div className="pdf-viewer">
+              <Viewer fileUrl={resumePdf} />
+            </div>
+          ) : (
             <ReactMarkdown
               className="font-normal leading-relaxed lg:mb-8 text-lg"
               rehypePlugins={[raw]}
             >
               {description}
             </ReactMarkdown>
-          }
+          )}
         </div>
-        <div>
-
-        </div>
+        <div></div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ResumeTab
+export default ResumeTab;

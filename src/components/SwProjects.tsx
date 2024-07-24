@@ -16,7 +16,7 @@ const SwProjects = () => {
       <div className="max-w-screen-xl mx-auto px-4 lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-4 bg-[#FFC700] p-6 rounded-lg max-h-screen overflow-y-auto">
           <h2 className="mb-10 text-4xl font-normal tracking-normal xl:text-5xl">
-            SW Projects
+            Software Projects
           </h2>
           <ul className="space-y-4">
             {projects.map((project, index) => (
