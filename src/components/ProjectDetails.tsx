@@ -1,8 +1,8 @@
-import { useMemo, useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import projectsData from '../../portfolio.json';
-import Button from './Button';
-import ArrowTopRight from './ArrowTopRight';
+import { useMemo, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
+import projectsData from "../../portfolio.json";
+import Button from "./Button";
+import ArrowTopRight from "./ArrowTopRight";
 
 // Define the Project interface
 interface Project {
@@ -16,7 +16,7 @@ interface Project {
   slug: string;
   banner: string;
   content: string;
-  images: string[];
+  images: { src: string; caption: string }[];
 }
 
 const ProjectDetails = () => {
@@ -27,7 +27,12 @@ const ProjectDetails = () => {
   const projects = projectsData as Project[]; // Cast the projectsData to Project[]
 
   const selectedProject = useMemo<Project | undefined>(() => {
-    return slug ? projects.find((project: Project) => project.slug.toLowerCase() === slug.toLowerCase()) : undefined;
+    return slug
+      ? projects.find(
+          (project: Project) =>
+            project.slug.toLowerCase() === slug.toLowerCase()
+        )
+      : undefined;
   }, [slug, projects]);
 
   const scrollToDetails = () => {
@@ -36,7 +41,7 @@ const ProjectDetails = () => {
       elmnt.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        inline: "start"
+        inline: "start",
       });
     }
   };
@@ -65,13 +70,16 @@ const ProjectDetails = () => {
               {selectedProject.description}
             </p>
           </div>
-          <Button runFunc={scrollToDetails} classNames="lg:col-span-5 lg:w-28 lg:h-28 w-24 h-24 lg:place-self-center" />
+          <Button
+            runFunc={scrollToDetails}
+            classNames="lg:col-span-5 lg:w-28 lg:h-28 w-24 h-24 lg:place-self-center"
+          />
         </div>
       </section>
       <section
         className="py-64 bg-neutral-950 w-full bg-fixed bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${selectedProject.banner})`
+          backgroundImage: `url(${selectedProject.banner})`,
         }}
       />
       <div
@@ -97,15 +105,21 @@ const ProjectDetails = () => {
       >
         <div>
           <h3 className="font-semibold text-lg">Client</h3>
-          <p className="text-xl mt-3 text-gray-500 font-normal">{selectedProject.company}</p>
+          <p className="text-xl mt-3 text-gray-500 font-normal">
+            {selectedProject.company}
+          </p>
         </div>
         <div>
           <h3 className="font-semibold text-lg">Services</h3>
-          <p className="text-xl mt-3 text-gray-500 font-normal">{selectedProject.category}</p>
+          <p className="text-xl mt-3 text-gray-500 font-normal">
+            {selectedProject.category}
+          </p>
         </div>
         <div>
           <h3 className="font-semibold text-lg">Deliverables</h3>
-          <p className="text-xl mt-3 text-gray-500 font-normal">{selectedProject.category}</p>
+          <p className="text-xl mt-3 text-gray-500 font-normal">
+            {selectedProject.category}
+          </p>
         </div>
         <div>
           <h3 className="font-semibold text-lg">Website</h3>
@@ -137,31 +151,39 @@ const ProjectDetails = () => {
           </a>
         </div>
       </div>
-      <div ref={targetElem} className="markdown mx-auto md:max-w-2xl py-32 md:px-0 px-4" dangerouslySetInnerHTML={{ __html: selectedProject.content }} />
+      <div
+        ref={targetElem}
+        className="markdown mx-auto md:max-w-2xl py-32 md:px-0 px-4"
+        dangerouslySetInnerHTML={{ __html: selectedProject.content }}
+      />
       <hr className="my-12" />
       <section className="bg-[#FFC700] dark:bg-neutral-900 py-20 lg:py-32">
         <div className="relative grid auto-cols-fr gap-10 max-w-screen-xl px-4 mx-auto lg:grid-cols-12">
           <div className="place-self-start lg:col-span-7">
-            <h3 className="mb-4 text-4xl font-normal tracking-normal xl:text-5xl md:text-4xl">Project gallery</h3>
-          </div>
-          <div className="lg:col-span-5">
-            <p className="mb-6 font-normal leading-relaxed text-gray-500 lg:mb-8 text-xl">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae doloribus qui ullam eaque?
-            </p>
+            <h3 className="mb-12 text-4xl font-normal tracking-normal xl:text-5xl md:text-4xl">
+              Project gallery 
+            </h3>
           </div>
         </div>
         <div className="grid gap-2 px-4 grid-cols-12">
-          {selectedProject.images && selectedProject.images.map((image, index) => (
-            <div key={index} className="group overflow-hidden md:col-span-4 col-span-12 relative">
-              <img
-                src={image}
-                className="transition-all duration-700 animating-image cursor-pointer"
-                alt={`Project gallery ${index + 1}`}
-                onClick={() => openModal(image)}
-              />
-              <div className="bg-neutral-950 absolute inset-0 transition-all duration-700 animating-bg w-full" />
-            </div>
-          ))}
+          {selectedProject.images &&
+            selectedProject.images.map((image, index) => (
+              <div
+                key={index}
+                className="group overflow-hidden md:col-span-4 col-span-12 relative"
+              >
+                <img
+                  src={image.src}
+                  className="transition-all duration-700 animating-image cursor-pointer"
+                  alt={`Project gallery ${index + 1}`}
+                  onClick={() => openModal(image.src)}
+                />
+                <div className="bg-neutral-950 absolute inset-0 transition-all duration-700 animating-bg w-full" />
+                <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center py-2">
+                  {image.caption}
+                </p>
+              </div>
+            ))}
         </div>
       </section>
       {modalImage && (
@@ -173,7 +195,11 @@ const ProjectDetails = () => {
             >
               &times;
             </button>
-            <img src={modalImage} alt="Expanded view" className="max-w-full max-h-full" />
+            <img
+              src={modalImage}
+              alt="Expanded view"
+              className="max-w-full max-h-full"
+            />
           </div>
         </div>
       )}

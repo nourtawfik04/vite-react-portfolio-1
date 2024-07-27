@@ -10,19 +10,9 @@
       "slug": "tubender"
     },
     {
-      "id": 2,
-      "title": "Weekly Journal",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "image": "/images/preview-6.jpeg",
-      "url": "#",
-      "category": "Branding",
-      "company": "Technology",
-      "slug": "weekly-journal"
-    },
-    {
       "id": 3,
       "title": "BMC Research",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description": "Developed a website with a research team for ENT oncology using Typescript and React, integrating a recommender system for personalized treatment recommendations.",
       "image": "/images/bmc.gif",
       "url": "#",
       "category": "Web Design",
@@ -32,11 +22,11 @@
     {
       "id": 4,
       "title": "Personal Website",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description": "This project is this current website that showcases my work as both a UX Designer and Software Engineer.",
       "image": "/images/portfolio.png",
       "url": "#",
       "category": "Illustrations",
-      "company": "Edu X",
+      "company": "Personal",
       "slug": "personal-website"
     }
   ]

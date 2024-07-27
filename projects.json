@@ -28,15 +28,5 @@
     "category": "Web Design",
     "company": "Consulting X",
     "slug": "header-enhancement"
-  },
-  {
-    "id": 4,
-    "title": "Hubhomez",
-    "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "/images/hubhomez.webp",
-    "url": "#",
-    "category": "Illustrations",
-    "company": "Edu X",
-    "slug": "hubhomez"
   }
 ]

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import resumePng from "/images/resume.png"; // Path relative to the public directory
-
+import resumePng from "/images/finalresume.png"; // Path relative to the public directory
 const Resume = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 

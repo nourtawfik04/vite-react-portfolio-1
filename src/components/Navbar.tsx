@@ -82,12 +82,6 @@ const Navbar = () => {
           >
             Header Improvement
           </Link>
-          <Link
-            to="/hubhomez"
-            className="text-sm text-neutral-800 dark:text-neutral-100"
-          >
-            HubHomez
-          </Link>
         </div>
         <div className="flex flex-col space-y-4 mr-10">
           <Link
@@ -103,10 +97,10 @@ const Navbar = () => {
             Tubender
           </Link>
           <Link
-            to="/projects/weekly-journal"
+            to="/projects/personal-website"
             className="text-sm text-neutral-800 dark:text-neutral-100"
           >
-            Weekly Journal
+            Personal Website
           </Link>
           <Link
             to="/projects/bmc-research"
